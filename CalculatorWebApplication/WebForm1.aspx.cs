@@ -20,6 +20,11 @@ namespace CalculatorWebApplication
                                 CalculatorService.CalculatorWebServiceSoapClient();
             int result = client.Add(Convert.ToInt32(txtFirstNumber.Text), Convert.ToInt32(txtSecondNumber.Text));
             lblResult.Text = result.ToString();
+
+            gvCalculations.DataSource = client.GetCalculations();
+            gvCalculations.DataBind();
+
+            gvCalculations.HeaderRow.Cells[0].Text = "Recent Calculations";
         }
     }
 }
