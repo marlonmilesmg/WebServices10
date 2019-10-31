@@ -17,7 +17,7 @@ namespace WebServices10
     public class CalculatorWebService : System.Web.Services.WebService
     {
 
-        [WebMethod(EnableSession = true)]
+        [WebMethod(EnableSession = true, Description ="This method adds 2 numbers", CacheDuration = 25)]
         public int Add(int firstNumber, int secondNumber)
         {
             List<string> calculations;
