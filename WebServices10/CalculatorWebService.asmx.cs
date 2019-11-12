@@ -16,7 +16,7 @@ namespace WebServices10
     // [System.Web.Script.Services.ScriptService]
     public class CalculatorWebService : System.Web.Services.WebService
     {
-
+        //To Enable WebMethod Overloading You Should use MessageName property. This propert is used to uniquely identify the individual XML web service methods
         [WebMethod(EnableSession = true, Description ="This method adds 2 numbers", CacheDuration = 25)]
         public int Add(int firstNumber, int secondNumber)
         {
