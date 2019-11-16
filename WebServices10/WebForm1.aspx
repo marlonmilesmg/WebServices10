@@ -58,5 +58,10 @@
         </table>
 
     </form>
+
+    <h3>
+        The time below does not change, when we click Get Student button as we are doing partial page post back and not a full page postback.
+    </h3>
+    <asp:Label ID="lblTime" runat="server" ></asp:Label>
 </body>
 </html>
